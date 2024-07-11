@@ -35,10 +35,7 @@ const form = useForm({
 const getData = {
     name: user.name,
     email: user.email,
-    number: user.phone_number.number,
-    percentage: (user.percentage ?? 0) + '%',
     roles: user.roles.map(role => role.name),
-    agency: user.agency?.name ?? '',
 }
 
 const getImage = computed(() => {
@@ -52,12 +49,11 @@ const getImage = computed(() => {
 });
 
 const savePhoto = () => {
-    form.post(route('user.updatePhoto', user.id), {
-        // onSuccess: () => location.reload(),
-        onError: (error) => {
-            console.log('error: ' + error)
-        },
-    });
+    // form.post(route('user.updatePhoto', user.id), {
+    //     onError: (error) => {
+    //         console.log('error: ' + error)
+    //     },
+    // });
 }
 
 </script>
@@ -87,19 +83,9 @@ const savePhoto = () => {
                         <FormControl v-model="getData.email" :icon="mdiEmail" placeholder="Correo Electrónico"
                             disabled />
                     </FormField>
-                    <FormField label="Numero de teléfono:">
-                        <FormControl type="number" required v-model="getData.number" :icon="mdiPhoneDial"
-                            placeholder="Numero de teléfono" disabled />
-                    </FormField>
                 </div>
             </div>
             <div class="md:flex md:space-x-4">
-                <FormField class="w-full" label="Agencia:">
-                    <FormControl :disabled="true" :icon="mdiOfficeBuilding" v-model="getData.agency" />
-                </FormField>
-                <FormField class="w-full" label="Comisión:">
-                    <FormControl :disabled="true" v-model="getData.percentage" :icon="mdiPercentCircle" />
-                </FormField>
                 <FormField class="w-full" label="Rol en el sistema:">
                     <FormControl :disabled="true" v-model="getData.roles" :icon="mdiAccountStar" />
                 </FormField>

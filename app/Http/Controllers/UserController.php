@@ -4,17 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
-use App\Models\Agency;
-use App\Models\File;
 use Illuminate\Http\Request;
 use App\Models\Module;
-use App\Models\PhoneNumber;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use App\Models\User;
 use Inertia\Response;
 use Inertia\Inertia;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;

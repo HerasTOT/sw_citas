@@ -38,9 +38,16 @@ use Inertia\Inertia;
 |
 */
 
-
-Route::get('/', [WelcomeController::class, 'welcome'])
-    ->name('welcome');
+Route::get('/', function () {
+    return Inertia::render('Welcome/Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
+})->name('welcome');
+// Route::get('/', [WelcomeController::class, 'welcome'])
+//     ->name('welcome');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {

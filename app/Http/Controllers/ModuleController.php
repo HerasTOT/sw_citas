@@ -57,11 +57,11 @@ class ModuleController extends Controller
         );
 
         return Inertia::render("{$this->source}Index", [
-            'modules'        =>  $records,
-            'title'          => 'Gestión de Módulos',
-            'routeName'      => $this->routeName,
-            'search'         => $request->search ?? '',
-            'direction'     => $direction
+            'modules'   =>  $records,
+            'title'     => 'Gestión de Módulos',
+            'routeName' => $this->routeName,
+            'search'    => $request->search ?? '',
+            'direction' => $direction
         ]);
     }
 
