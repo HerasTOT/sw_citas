@@ -1,6 +1,10 @@
 import {
     mdiAccountCircle,
     mdiMonitor,
+    mdiCogOutline, 
+    mdiCalendarAccount ,
+    mdiCalendarCheckOutline ,
+    mdiCalendarEdit,
     mdiDomain,
     mdiShieldCrown,
     mdiViewList,
@@ -20,6 +24,7 @@ import {
     mdiTicketOutline,
     mdiAccountCreditCard,
     mdiSourceBranch,
+    mdiCalendarMonth,
 } from "@mdi/js";
 // import Icon from '@mdi/react';
 
@@ -66,6 +71,26 @@ export default [
                 permission: "user.index",
             },
         ],
+    },
+    {
+        route: "profile.edit",
+        label: "Mantenimiento",
+        icon: mdiCogOutline ,
+    },
+    {
+        route: "profile.edit",
+        label: "Citas",
+        icon: mdiCalendarEdit,
+    },
+    {
+        route: "profile.edit",
+        label: "Historial citas",
+        icon: mdiCalendarCheckOutline  ,
+    },
+    {
+        route: "profile.edit",
+        label: "Calendario",
+        icon: mdiCalendarMonth ,
     },
     {
         isDivider: true,

@@ -1,5 +1,5 @@
 <script setup>
-import { mdiLogout, mdiClose } from "@mdi/js";
+import { mdiLogout, mdiClose} from "@mdi/js";
 import { computed } from "vue";
 import { useStyleStore } from "@/stores/style.js";
 import AsideMenuList from "@/Components/AsideMenuList.vue";
@@ -42,7 +42,9 @@ const asideLgCloseClick = (event) => {
                 class="flex flex-row h-14 items-center justify-between dark:bg-slate-900">
                 <div class="justify-center flex w-full p-2">
                     <div>
-                        <img class="rounded-xl" src="/img/logo.png" width="45" alt="">
+                        <img src="http://citas.test:8080/storage/imagenes/dental.png"
+                    style="width: 35px; height: auto;display: block; margin: 0 auto;">
+                        <img class="rounded-xl" src="/img/dental.png" width="45" alt="">
                     </div>
                 </div>
                 <button class="hidden lg:inline-block xl:hidden p-3" @click.prevent="asideLgCloseClick">
