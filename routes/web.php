@@ -8,16 +8,20 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ZoneController;
 use App\Http\Controllers\CoverageController;
 use App\Http\Controllers\CoveragePackageController;
+use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\EspecialidadesController;
 use App\Http\Controllers\LiquidationController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ModuleController;
 use App\Http\Controllers\ModuloController;
+use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\PartialReceiptController;
 use App\Http\Controllers\PaymentVoucherController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ReceiptController;
+use App\Http\Controllers\TratamientosController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WelcomeController;
 use App\Models\Module;
@@ -63,6 +67,11 @@ Route::middleware('auth')->group(function () {
     Route::resource('permissions', PermissionController::class)->names('permissions');
     Route::resource('perfiles', RoleController::class)->parameters(['perfiles' => 'perfiles']);
     Route::resource('user', UserController::class)->parameters(['user' => 'user']);
+
+    Route::resource('especialidades', EspecialidadesController::class);
+    Route::resource('tratamientos', TratamientosController::class);
+    Route::resource('doctores', DoctorController::class);
+    Route::resource('pacientes', PacienteController::class);
 });
 
 require __DIR__ . '/auth.php';

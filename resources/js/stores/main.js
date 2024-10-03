@@ -1,5 +1,9 @@
 import { defineStore } from "pinia";
 import axios from "axios";
+//in your `main.js` file
+import '/node_modules/flowbite-vue/dist/index.css';
+
+
 
 export const useMainStore = defineStore("main", {
   state: () => ({

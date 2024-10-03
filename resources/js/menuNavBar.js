@@ -26,10 +26,7 @@ export default [
                 label: "Mi perfil",
                 href: "/profile",
             },
-            // {
-            //   icon: mdiCogOutline,
-            //   label: "Settings",
-            // },
+           
             {
                 icon: mdiEmail,
                 label: "Notificaciones",

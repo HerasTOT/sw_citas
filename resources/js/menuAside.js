@@ -2,6 +2,8 @@ import {
     mdiAccountCircle,
     mdiMonitor,
     mdiCogOutline, 
+    mdiListBox,
+    mdiPlaylistEdit ,
     mdiCalendarAccount ,
     mdiCalendarCheckOutline ,
     mdiCalendarEdit,
@@ -12,6 +14,7 @@ import {
     mdiLockCheckOutline,
     mdiAccountSupervisor,
     mdiAccount,
+    mdiClipboardList,
     mdiLightbulbOutline,
     mdiBook,
     mdiMap,
@@ -71,6 +74,30 @@ export default [
                 permission: "user.index",
             },
         ],
+    },
+    {
+        label: "Catalogos",
+        icon: mdiPlaylistEdit ,
+        role: "Admin",
+        menu: [
+            {
+                label: "Especialidades",
+                route: "especialidades.index",
+                icon: mdiListBox ,
+            },
+            {
+                label: "Tratamientos",
+                route: "tratamientos.index",
+                icon: mdiClipboardList ,
+               
+            },
+           
+        ],
+    },
+    {
+        route: "doctores.index",
+        label: "Doctores",
+        icon: mdiCogOutline ,
     },
     {
         route: "profile.edit",
